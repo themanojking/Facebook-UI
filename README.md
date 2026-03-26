@@ -79,7 +79,7 @@ The main landing page with a two-column layout:
 - Password input with lock icon + show/hide toggle
 - "Log In" button with loading spinner
 - "Forgot password?" link → navigates to `/forgot-password`
-- "Create new account" button → navigates to `/signup`
+- "Create new account" button → navigates to `/` or loginpage
 - Animated background blobs
 - Fully responsive (stacks on mobile)
 
