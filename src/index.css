@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@layer components {
+  /* Input focus ring */
+  .fb-input {
+    @apply w-full px-4 py-3 pl-11 border-2 border-gray-200 rounded-xl text-gray-800 bg-gray-50 font-nunito text-sm font-semibold outline-none transition-all duration-200 placeholder-gray-400;
+  }
+  .fb-input:focus {
+    @apply border-fb-blue bg-white shadow-[0_0_0_4px_rgba(24,119,242,0.10)];
+  }
+  .fb-input.error {
+    @apply border-red-400 bg-red-50 shadow-[0_0_0_4px_rgba(239,68,68,0.08)];
+  }
+  .fb-input.success {
+    @apply border-green-400 bg-green-50;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply w-full py-3 rounded-xl font-nunito font-bold text-white text-base transition-all duration-200 bg-gradient-to-r from-fb-blue to-blue-600 shadow-[0_4px_14px_rgba(24,119,242,0.4)] hover:from-fb-blueDark hover:to-blue-700 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(24,119,242,0.5)] active:translate-y-0 cursor-pointer border-0;
+  }
+  .btn-green {
+    @apply w-full py-3 rounded-xl font-nunito font-bold text-white text-base transition-all duration-200 bg-gradient-to-r from-fb-green to-green-500 shadow-[0_4px_14px_rgba(66,183,42,0.4)] hover:from-fb-greenDark hover:to-green-600 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(66,183,42,0.5)] active:translate-y-0 cursor-pointer border-0;
+  }
+  .btn-outline {
+    @apply w-full py-3 rounded-xl font-nunito font-bold text-fb-blue text-base transition-all duration-200 bg-transparent border-2 border-fb-blue hover:bg-fb-blueLight hover:-translate-y-0.5 active:translate-y-0 cursor-pointer;
+  }
+}
