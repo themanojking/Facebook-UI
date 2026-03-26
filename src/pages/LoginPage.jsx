@@ -80,7 +80,7 @@ export default function LoginPage() {
         setForm({ email: '', password: '' })
         setTouched({ email: false, password: false })
         setErrors({})
-        navigate('/signup') // redirect away from login so re-mount doesn't flash
+        navigate('/') // redirect away from login so re-mount doesn't flash
       }, 1600)
     }, 1500)
   }
